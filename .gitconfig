@@ -1,0 +1,13 @@
+[user]
+  name =
+  email =
+[push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  st = status
+  d  = diff
