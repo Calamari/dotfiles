@@ -14,3 +14,6 @@ parse_git_branch ()
 # \w current path
 #    current git branch
 PS1="\w\$(parse_git_branch)$ "
+
+# include aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
