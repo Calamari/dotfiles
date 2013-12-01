@@ -1,3 +1,5 @@
 alias ll='ls -la'
 alias tlf='tail -f'
 alias fn='find . -name'
+
+function mcd() { mkdir -p "$@" && cd "$@"; }
