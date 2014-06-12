@@ -17,3 +17,6 @@ PS1="\w\$(parse_git_branch)$ "
 
 # include aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Allow more files to be opened simultanously
+ulimit -n 2560
