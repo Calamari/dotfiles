@@ -8,6 +8,8 @@ alias ll='ls -la'
 alias tlf='tail -f'
 alias fn='find . -name'
 
+alias flushdns='sudo discoveryutil udnsflushcaches'
+
 function mcd() { mkdir -p "$@" && cd "$@"; }
 
 # IP addresses
