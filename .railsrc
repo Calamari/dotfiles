@@ -1,1 +1,6 @@
--d postgresql -T
+--skip-bundle
+--skip-keeps
+--skip-spring
+--skip-test-unit
+--skip-turbolinks
+--database=postgresql
