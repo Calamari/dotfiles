@@ -14,3 +14,6 @@
   l  = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   ll = log --stat --abbrev-commit
   delbranch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  noff = merge --no-ff
+  pick = cherry-pick
+  ri = rebase -i
