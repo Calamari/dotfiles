@@ -18,5 +18,10 @@ PS1="\w\$(parse_git_branch)$ "
 # include aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# include git autocompletion
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
+
 # Allow more files to be opened simultanously
 ulimit -n 2560
