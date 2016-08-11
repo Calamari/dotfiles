@@ -20,3 +20,5 @@
   noff = merge --no-ff
   pick = cherry-pick
   ri = rebase -i
+  prune = fetch origin --prune
+  
