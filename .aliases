@@ -17,3 +17,12 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 
 # runs given docker container with /bin/bash
 function drun() { docker run -i -t --rm "$@" /bin/bash; }
+
+# Pretty prints json as response, example: wget … | ppjson
+alias ppjson="ruby -r json -e 'jj JSON.parse gets'"
+
+# Fix SSL Problems with ruby??
+alias fix_ruby_ssl="curl -fsSL curl.haxx.se/ca/cacert.pem -o \"$(ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE')\""
+
+# Makes videos small
+function mp4reduce() { ffmpeg -i "$@".mp4 -c:v libx264 -preset veryfast "$@"-2.mp4; }
