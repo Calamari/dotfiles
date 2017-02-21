@@ -1,10 +1,29 @@
 [user]
-  name =
-  email =
+  name = Calamari
+  email = g.tavonius@gmail.com
+
 [push]
   default = current
+
 [color]
   ui = auto
+
+[color "branch"]
+  current = blue reverse
+  local = blue
+  remote = green
+
+[color "diff"]
+  meta = blue bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = blue
+  changed = green
+  untracked = cyan
+
 [alias]
   br = branch
   ci = commit
@@ -21,4 +40,4 @@
   pick = cherry-pick
   ri = rebase -i
   prune = fetch origin --prune
-  
+
