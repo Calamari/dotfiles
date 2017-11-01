@@ -27,3 +27,6 @@ alias fix_ruby_ssl="curl -fsSL curl.haxx.se/ca/cacert.pem -o \"$(ruby -ropenssl 
 
 # Makes videos small
 function mp4reduce() { ffmpeg -i "$@".mp4 -c:v libx264 -preset veryfast "$@"-2.mp4; }
+
+# Count files recursively in dir
+function count_files() { find "$@" -type f | wc -l; }
