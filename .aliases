@@ -7,6 +7,7 @@ alias ......='cd ../../../../..'
 alias ll='ls -la'
 alias tlf='tail -f'
 alias fn='find . -name'
+alias be='bundle exec'
 
 alias flushdns='sudo killall -HUP mDNSResponder'
 
@@ -30,3 +31,5 @@ function mp4reduce() { ffmpeg -i "$@".mp4 -c:v libx264 -preset veryfast "$@"-2.m
 
 # Count files recursively in dir
 function count_files() { find "$@" -type f | wc -l; }
+
+alias xingvpn="openvpn --config ~/xing.ovpn"
