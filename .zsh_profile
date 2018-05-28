@@ -1,0 +1,5 @@
+
+[[ -f ~/.aliases ]] && source ~/.aliases
+
+export BUNDLER_EDITOR=atom
+export DOCKER_IP=127.0.0.1
