@@ -1,4 +1,5 @@
 echo "Copying dotfiles"
+rm ~/.aliases ; ln -s ~/dotfiles/.aliases ~/.aliases
 rm ~/.bashrc ; ln -s ~/dotfiles/.bashrc ~/.bashrc
 rm ~/.bash_profile ; ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 rm ~/.git-completion.bash ; ln -s ~/dotfiles/.git-completion.bash ~/.git-completion.bash

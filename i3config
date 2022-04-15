@@ -143,17 +143,17 @@ bindsym Mod4+Tab workspace back_and_forth
 bindsym Print exec xfce4-screenshooter
 
 # Put some workspaces on HDMI if possible
-workspace 2 output HDMI-1
-workspace 3 output HDMI-1
-workspace 4 output HDMI-1
+workspace 2 output DP-3
+workspace 3 output DP-3
+workspace 4 output DP-3
 
 ### Which workspace goes to which monitori
 #bindsym Mod4+Shift+Prior exec --no-startup-id ~/scripts/cycle-workspace # PageUp
-bindsym Mod4+Shift+Prior move workspace to output HDMI-1
+bindsym Mod4+Shift+Prior move workspace to output DP-3
 bindsym Mod4+Shift+Next move workspace to output eDP-1 # PageDown
 
-#[workspace=$wscode] move workspace to output HDMI-1
-#[workspace=$wschrome] move workspace to output HDMI-1
+#[workspace=$wscode] move workspace to output DP-3
+#[workspace=$wschrome] move workspace to output DP-3
 
 
 # reload the configuration file
@@ -243,7 +243,7 @@ bindsym XF86Tools exec --no-startup-id scripts/musicctl play
 
 ## Touchpad stuff
 #Disable middle mouse click
-exec xinput set-button-map 11 1 0 3 4 5 6 7 8 9 10 11 12
+exec xinput set-button-map 11 1 0 3
 #Disable tap to click
 exec synclient TapButton1=0
 

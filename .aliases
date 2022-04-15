@@ -29,7 +29,19 @@ alias fix_ruby_ssl="curl -fsSL curl.haxx.se/ca/cacert.pem -o \"$(ruby -ropenssl 
 # Makes videos small
 function mp4reduce() { ffmpeg -i "$@".mp4 -c:v libx264 -preset veryfast "$@"-2.mp4; }
 
+# Makes a GIF out of an mp4
+function mp4gif() {
+  ffmpeg -i "$@".mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$@".gif
+}
+
+# cleanup merged branches
+function gitclean() {
+  git branch --merged | egrep -v "(^\*|master|dev|develop|production)" | xargs git branch -d
+}
+
 # Count files recursively in dir
 function count_files() { find "$@" -type f | wc -l; }
 
-alias xingvpn="openvpn --config ~/xing.ovpn"
+function fscreen() {
+  xrandr --output DP-3 --above eDP-1 --mode 2560x1440;
+}

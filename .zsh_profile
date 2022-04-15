@@ -5,3 +5,6 @@ export BUNDLER_EDITOR=vim
 export DOCKER_IP=127.0.0.1
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Add not dotfiles tracked scripts & configs
+[[ -f ~/.zsh_local ]] && source ~/.zsh_local
