@@ -63,8 +63,7 @@ plugins=(
   ruby
   rails
   bundler
-  #nvm
-  zsh-autosuggestions
+  zsh-autocomplete
   zsh-syntax-highlighting
 )
 
@@ -89,3 +88,8 @@ fi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source $HOME/.zsh_profile
