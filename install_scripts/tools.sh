@@ -26,7 +26,7 @@ if command -v code &> /dev/null ; then
   # GIT
   code --install-extension GitHub.copilot
   code --install-extension eamodio.gitlens
-  code --install-extension pantajoe.vscode-elixir-credo
+  # Docker
   code --install-extension ms-azuretools.vscode-docker
   # Frontend
   code --install-extension dbaeumer.vscode-eslint
@@ -40,6 +40,8 @@ if command -v code &> /dev/null ; then
   code --install-extension matklad.rust-analyzer
   # Elixir
   code --install-extension phoenixframework.phoenix
+  code --install-extension JakeBecker.elixir-ls
+  code --install-extension pantajoe.vscode-elixir-credo
   # Ruby
   code --install-extension rebornix.ruby
   code --install-extension castwide.solargraph
@@ -75,5 +77,5 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 # NVM & node
 if ! command -v nvm &> /dev/null ; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  nvm install 14
+  nvm installzshpro
 fi

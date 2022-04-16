@@ -9,6 +9,8 @@ rm ~/.railsrc ; ln -s ~/dotfiles/.railsrc ~/.railsrc
 rm ~/.rspec ; ln -s ~/dotfiles/.rspec ~/.rspec
 rm ~/.zshrc ; ln -s ~/dotfiles/.zshrc ~/.zshrc
 rm ~/.zsh_profile ; ln -s ~/dotfiles/.zsh_profile ~/.zsh_profile
+rm ~/.config/Code/User/keybindings.json ; ln -s ~/dotfiles/code/keybindings.json ~/.config/Code/User/keybindings.json
+rm ~/.config/Code/User/settings.json ; ln -s ~/dotfiles/code/settings.json ~/.config/Code/User/settings.json
 
 mkdir -p ~/.config/i3
 rm ~/.config/i3/config ; ln -s ~/dotfiles/i3config ~/.config/i3/config
