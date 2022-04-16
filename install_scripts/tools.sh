@@ -1,5 +1,5 @@
 echo "Installing Tools"
-sudo apt-get install -y thunar zsh light
+sudo apt-get install -y thunar zsh light vim
 
 # ZSH
 if [ ! -f $HOME/.oh-my-zsh/.git ]; then
@@ -47,3 +47,7 @@ fi
 
 # Make light work
 sudo usermod -aG video calamari
+
+# Install Elixir
+sudo add-apt-repository "deb http://binaries.erlang-solutions.com/ubuntu focal contrib"
+sudo apt-get update && sudo apt-get install -y esl-erlang elixir
