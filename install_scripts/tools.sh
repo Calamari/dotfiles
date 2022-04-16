@@ -1,5 +1,5 @@
 echo "Installing Tools"
-sudo apt-get install -y thunar zsh
+sudo apt-get install -y thunar zsh light
 
 # ZSH
 if [ ! -f $HOME/.oh-my-zsh/.git ]; then
@@ -44,3 +44,6 @@ if command -v code &> /dev/null ; then
   # YAML
   code --install-extension redhat.vscode-yaml
 fi
+
+# Make light work
+sudo usermod -aG video calamari
