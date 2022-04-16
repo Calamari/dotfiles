@@ -93,3 +93,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 source $HOME/.zsh_profile
+# Start up z
+eval "$(zoxide init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
