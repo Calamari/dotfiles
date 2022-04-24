@@ -13,6 +13,10 @@ alias flushdns='sudo killall -HUP mDNSResponder'
 
 function mcd() { mkdir -p "$@" && cd "$@"; }
 
+if ! command -v docker-compose &> /dev/null ; then
+    alias docker-compose='docker compose'
+fi
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
@@ -31,17 +35,17 @@ function mp4reduce() { ffmpeg -i "$@".mp4 -c:v libx264 -preset veryfast "$@"-2.m
 
 # Makes a GIF out of an mp4
 function mp4gif() {
-  ffmpeg -i "$@".mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$@".gif
+    ffmpeg -i "$@".mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$@".gif
 }
 
 # cleanup merged branches
 function gitclean() {
-  git branch --merged | egrep -v "(^\*|master|dev|develop|production)" | xargs git branch -d
+    git branch --merged | egrep -v "(^\*|master|dev|develop|production)" | xargs git branch -d
 }
 
 # Count files recursively in dir
 function count_files() { find "$@" -type f | wc -l; }
 
 function fscreen() {
-  xrandr --output DP-3 --above eDP-1 --mode 2560x1440;
+    xrandr --output DP-3 --above eDP-1 --mode 2560x1440;
 }
